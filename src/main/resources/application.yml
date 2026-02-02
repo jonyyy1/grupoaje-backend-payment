@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: qr-payments-hex
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/qrpay}
+    username: ${SPRING_DATASOURCE_USERNAME:qrpay}
+    password: ${SPRING_DATASOURCE_PASSWORD:qrpay}
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+
+  mvc:
+    problemdetails:
+      enabled: true
+
+server:
+  port: ${SERVER_PORT:8080}
